@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="Task table schema" source="com.glide.task">e884bc289921221008ddd351c8920a88</dependency>
+        <min_version>1.0.0</min_version>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 08:39:03</sys_created_on>
+        <sys_id>b417515b83432210e3dc9f60deaad31f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="Event Management &amp;amp; Planning System" source="x_1791991_event_ma">195b855383032210e3dc9f60deaad3a3</sys_package>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 08:39:03</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>
