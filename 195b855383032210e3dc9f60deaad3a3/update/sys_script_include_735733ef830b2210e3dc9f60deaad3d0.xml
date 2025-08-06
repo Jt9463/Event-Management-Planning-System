@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1791991_event_ma.VendorUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>VendorUtils</name>
+        <script><![CDATA[var VendorUtils = Class.create();
+VendorUtils.prototype = {
+    initialize: function() {},
+
+    fetchAllVendors: function() {
+        var res = [];
+        var gr = new GlideRecord('x_1791991_event_ma_vendor');
+        gr.query();
+        while (gr.next()) {
+            res.push({
+                number: gr.getValue('number'),
+                vendor_name: gr.getValue('x_vendor_name'),
+                contact_person: gr.getValue('x_contact_person'),
+                contact_number: gr.getValue('x_contact_number'),
+                available: gr.getDisplayValue('x_available')
+            });
+        }
+        return JSON.stringify(res);
+    },
+
+    getVendorDetails: function(vendorId) {
+        var gr = new GlideRecord('x_1791991_event_ma_vendor');
+        if (gr.get(vendorId)) {
+            return {
+                name: gr.getValue('x_vendor_name'),
+                contact: gr.getValue('x_contact_number'),
+                service_type: gr.getValue('x_email'),
+                is_available: gr.getValue('x_available')
+            };
+        }
+        return null;
+    },
+
+    isVendorAvailable: function(vendorId) {
+        var gr = new GlideRecord('x_1791991_event_ma_vendor');
+        if (gr.get(vendorId)) {
+            return gr.getValue('x_available') == 'true';
+        }
+        return false;
+    },
+
+    getVendorsByEvent: function(eventId) {
+        var list = [];
+        var gr = new GlideRecord('x_1791991_event_ma_vendor');
+        gr.addQuery('x_event_id.number', eventId);
+        gr.query();
+
+        while (gr.next()) {
+            list.push({
+                name: gr.getValue('x_vendor_name'),
+                service_type: gr.getValue('x_contact_person'),
+                contact: gr.getValue('x_contact_number'),
+                is_available: gr.getValue('x_available')
+            });
+        }
+        return list;
+    },
+    type: 'VendorUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-05 15:05:42</sys_created_on>
+        <sys_id>735733ef830b2210e3dc9f60deaad3d0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>VendorUtils</sys_name>
+        <sys_package display_value="Event Management &amp;amp; Planning System" source="x_1791991_event_ma">195b855383032210e3dc9f60deaad3a3</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Event Management &amp;amp; Planning System">195b855383032210e3dc9f60deaad3a3</sys_scope>
+        <sys_update_name>sys_script_include_735733ef830b2210e3dc9f60deaad3d0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-05 15:05:42</sys_updated_on>
+    </sys_script_include>
+</record_update>

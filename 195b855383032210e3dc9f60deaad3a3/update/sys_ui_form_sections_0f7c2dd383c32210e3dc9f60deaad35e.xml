@@ -3,16 +3,16 @@
         <sys_ui_form_section action="INSERT_OR_UPDATE">
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-08-04 10:12:35</sys_created_on>
+            <sys_created_on>2025-08-04 21:08:10</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>077c2dd383c32210e3dc9f60deaad361</sys_id>
-            <sys_mod_count>0</sys_mod_count>
+            <sys_id>0e8204a7838f2210e3dc9f60deaad3c0</sys_id>
+            <sys_mod_count>1</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="x_1791991_event_ma_schedule" name="x_1791991_event_ma_schedule" sys_domain="global" view="Default view">0f7c2dd383c32210e3dc9f60deaad35e</sys_ui_form>
-            <sys_ui_section caption="Schedule Details:" display_value="Schedule Details:" name="x_1791991_event_ma_schedule" sys_domain="global" view="Default view">18ab6ddf83832210e3dc9f60deaad36e</sys_ui_section>
+            <sys_ui_section caption="Schedule Details:" display_value="Schedule Details:" name="x_1791991_event_ma_schedule" sys_domain="global" view="Default view">0a8204a7838f2210e3dc9f60deaad329</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-08-04 10:12:35</sys_updated_on>
+            <sys_updated_on>2025-08-04 21:08:10</sys_updated_on>
         </sys_ui_form_section>
         <sys_ui_form_section action="INSERT_OR_UPDATE">
             <position>1</position>
